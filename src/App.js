@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import CardTheme from "./components/Card";
+import SwitchTheme from "./components/Switch";
+import "antd/dist/antd.css";
+import ThemeProvider from "./context/ThemeProvider";
+import "./styles/theme.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <h2 style={{ textAlign: "center" }}>React Context</h2>
+        <CardTheme />
+        <SwitchTheme />
+      </div>
+    </ThemeProvider>
   );
 }
-
 export default App;
